@@ -1,0 +1,13 @@
+History.txt
+
+Manifest.txt
+
+README
+
+Rakefile
+
+test/test_rubylibcrack.rb
+
+ext/rubylibcrack.c
+
+ext/extconf.rb
