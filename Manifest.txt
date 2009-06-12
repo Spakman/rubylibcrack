@@ -8,6 +8,4 @@ Rakefile
 
 test/test_rubylibcrack.rb
 
-ext/rubylibcrack.c
-
-ext/extconf.rb
+lib/rubylibcrack.rb

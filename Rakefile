@@ -13,18 +13,8 @@ task :build do
   FileUtils.mv "rubylibcrack.gemspec.before_substitution", "rubylibcrack.gemspec", :force => true
 end
 
-desc "Builds the extension"
-task :build_extension => [ :clean_extension ] do
-  system "cd ext; ruby extconf.rb; make; cd ../"
-end
-
-desc "Cleans the files compiled by build_extension"
-task :clean_extension do
-  system "cd ext; rm dictconfig.h rubylibcrack.so rubylibcrack.o Makefile; cd ../"
-end
-
 desc "Run the unit tests"
-task :test => [ :build_extension ] do
+task :test do
   require "#{File.dirname(__FILE__)}/test/test_rubylibcrack"
 end
 

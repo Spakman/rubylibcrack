@@ -8,10 +8,9 @@ SPEC = Gem::Specification.new do |spec|
   spec.homepage = "http://mark.scottishclimbs.com/"
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A binding to the *nix password strength checking library, libcrack/cracklib."
+  spec.add_dependency('ffi')
   candidates = Dir.glob("{lib,test,ext}/**/*")
-  puts candidates.inspect
   spec.files = candidates
-  spec.extensions = "ext/extconf.rb"
   spec.require_path = "lib"
   spec.has_rdoc = true
   spec.extra_rdoc_files = [ "README" ]
