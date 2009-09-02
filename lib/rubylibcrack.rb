@@ -21,6 +21,7 @@ module Cracklib
       end
       begin
         @message = check(@password, dictpath)
+        return @message.nil?
       rescue
         return true
       end
