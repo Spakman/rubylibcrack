@@ -6,7 +6,7 @@ module Cracklib
     attr_reader :message
 
     extend FFI::Library
-    ffi_lib "crack", "/usr/lib/libcrack.so", "/lib/libcrack.so"
+    ffi_lib "crack"
     attach_function :check, "FascistCheck", [ :string, :string ], :string
     POTENTIAL_DICT_PATHS = %w(/usr/share/cracklib/pw_dict /usr/lib/cracklib_dict /usr/lib64/cracklib_dict /var/cache/cracklib/cracklib_dict)
     @@dictpath = ""
