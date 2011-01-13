@@ -8,7 +8,7 @@ SPEC = Gem::Specification.new do |spec|
   spec.homepage = "http://mark.scottishclimbs.com/"
   spec.platform = Gem::Platform::RUBY
   spec.summary = "A binding to the *nix password strength checking library, libcrack/cracklib."
-  spec.add_dependency('ffi')
+  spec.add_dependency('ffi') unless RUBY_ENGINE == "rbx"
   candidates = Dir.glob("{lib,test,ext}/**/*")
   spec.files = candidates
   spec.require_path = "lib"

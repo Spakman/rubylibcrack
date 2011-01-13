@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'ffi'
+require 'ffi' unless RUBY_ENGINE == "rbx"
 
 module Cracklib
   class Password
